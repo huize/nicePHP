@@ -180,8 +180,14 @@ class Route
                     // 有参数的情况下才注入
                     foreach($reflection->getParameters() AS $arg){
                         $name_key = $arg->getName();
+                        $defValue = '';
+                        if($arg->isDefaultValueAvailable()){
+                            $defValue = $arg->getDefaultValue();
+                        }
                         if(array_key_exists($name_key, $vars)){
                             $n_vars[$name_key] = $vars[$name_key];
+                        }else{
+                            $n_vars[$name_key] = $defValue;
                         }
                     }
                     // $res = $reflection->invoke(...$n_vars);
@@ -195,8 +201,14 @@ class Route
             if($parameters){
                 foreach($parameters as $parameter){
                     $name_key = $parameter->getName();
+                    $defValue = '';
+                    if($arg->isDefaultValueAvailable()){
+                        $defValue = $arg->getDefaultValue();
+                    }
                     if(array_key_exists($name_key, $vars)){
                         $n_vars[$name_key] = $vars[$name_key];
+                    }else{
+                        $n_vars[$name_key] = $defValue;
                     }
                 }
             }
