@@ -1,12 +1,13 @@
 {
-    "name": "nicePHP",
+    "name": "nice/nicephp",
     "description" : "一个简单易用的php框架",
     "type": "application",
     "keywords": ["nicePHP","php framework"],
     "license": "MIT",
     "authors": [
         {
-        
+          "name": "third",
+          "email": "third@gmail.com"
         }
     ],
     "require": {
