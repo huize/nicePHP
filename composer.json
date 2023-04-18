@@ -1,5 +1,5 @@
 {
-    "name": "nice/nicephp",
+    "name": "nicetec/nicephp",
     "description" : "一个简单易用的php框架",
     "type": "application",
     "keywords": ["nicePHP","php framework"],
